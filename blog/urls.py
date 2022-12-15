@@ -1,6 +1,7 @@
 from django_distill import distill_path
 from .views import IndexView, PostView, TagView
 from .models import Post, Tag
+from . import times
 
 
 def get_index():

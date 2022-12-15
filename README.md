@@ -39,7 +39,7 @@ $ pip install -r requirements.txt
 Then run the development server:
 
 ```bash
-$ ./manage.py runserver
+$  ./manage.py runserver
 ```
 
 You should be able to access the site on your local development server at [http://127.0.0.1:8000/](http://127.0.0.1:8000/). The admin is at

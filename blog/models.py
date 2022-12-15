@@ -2,6 +2,7 @@ from django.db import models
 from django.db.models import Q
 from django.contrib.auth import get_user_model
 from django.utils import timezone
+from . import times
 
 
 
@@ -10,6 +11,7 @@ class PostManager(models.Manager):
     def published(self):
         now = timezone.now()
         return self.filter(Q(publish_date__lte=now)|Q(publish_date=None))
+
 
 
 class Tag(models.Model):
@@ -24,6 +26,12 @@ class Tag(models.Model):
     def __str__(self):
         return self.name
 
+
+class Times(models.Model):
+    time = models.TimeField(times.times)
+    
+    def __str__(self):
+     return self.time
 
 class Post(models.Model):
 
